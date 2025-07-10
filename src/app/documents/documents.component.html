@@ -1,0 +1,85 @@
+<section>
+
+    <app-navbar></app-navbar>
+
+
+    <div class="lg-12 container-site">
+
+        <div class="d-flex justify-content-between">
+            <h1>Documents</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="lg-12">
+            <div class="row justify-content-between">
+
+                <div class="lg-3 acc-box">
+                    <cdk-accordion class="example-accordion">
+                        <ng-container *ngFor="let item of items; let i = index; trackBy: trackFn">
+                            <cdk-accordion-item #accordionItem="cdkAccordionItem" class="example-accordion-item"
+                                role="button" tabindex="0" [attr.id]="'accordion-header-' + i"
+                                [attr.aria-expanded]="accordionItem.expanded"
+                                [attr.aria-controls]="'accordion-body-' + i" [expanded]="expandedIndex === i">
+                                <h3 class="example-accordion-item-header" (click)="accordionItem.toggle()">
+                                    {{ item.header }}
+                                    <span class="example-accordion-item-description">
+                                        <i class="fas"
+                                            [ngClass]="{'fa-minus': accordionItem.expanded, 'fa-plus': !accordionItem.expanded}"></i>
+                                    </span>
+                                </h3>
+                                <div class="example-accordion-item-body" role="region"
+                                    [style.display]="accordionItem.expanded ? '' : 'none'"
+                                    [attr.id]="'accordion-body-' + i" [attr.aria-labelledby]="'accordion-header-' + i">
+                                    <!-- Iterate over each order in the subscription -->
+                                    <p *ngFor="let order of item.bodies; let j = index" class="order"
+                                        [class.last]="j === item.bodies.length - 1">
+                                        {{ order }}
+                                    </p>
+                                </div>
+                            </cdk-accordion-item>
+                        </ng-container>
+                    </cdk-accordion>
+                </div>
+                
+
+                <div class="lg-9 doc-table">
+                    <div class="table-head">
+                        <h2>Company LLC</h2>
+                    </div>
+
+                    <div class="order-table">
+
+                        <table class="custom-table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="header-1">Order</th>
+                                    <th class="header-2">Date Ordered</th>
+                                    <th class="header-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tableData">
+                                    <td><a href="" class="text-1">{{ item.order }}</a></td>
+                                    <td class="text-2">{{ item.date }}</td>
+                                    <td>
+                                        <span class="table-btn">
+                                            {{ item.status }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</section>

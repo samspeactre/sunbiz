@@ -1,0 +1,102 @@
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 1vw;
+}
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 55%;
+    width: 4.9vw;
+    height: 2.2vw;
+    margin: -3vw auto 0 auto;
+    overflow: hidden;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: rgba(237, 237, 237, 1);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 1vw;
+}
+
+#button-3 .knobs:before {
+    content: "";
+    position: absolute;
+    top: 0.2vw;
+    left: 0.2vw;
+    height: 1.8vw;
+    width: 1.8vw;
+    background-image: url(../../assets/img/toggle-sun.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: rgba(252, 183, 19, 1);
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15), background-image 0.3s ease;
+    background-position: 50% 55%;
+}
+
+#button-3 .checkbox:checked+.knobs:before {
+    top: 0.2vw;
+    left: 0.3vw;
+    height: 1.8vw;
+    width: 1.8vw;
+    background-image: url('../../assets/img/toggle-moon.png');
+    background-position: 50% 55%;
+    background-size: 70%;
+    background-color: rgb(78, 77, 77);
+    object-fit: cover;
+}
+
+#button-3 .checkbox:checked+.knobs:before {
+    content: "";
+    left: 2.7vw;
+    background-color: #111;
+}
+
+#button-3 .checkbox:checked~.layer {
+    background-color: rgba(252, 183, 19, 1);
+}

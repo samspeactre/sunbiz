@@ -1,0 +1,59 @@
+<section>
+
+    <app-navbar></app-navbar>
+    
+
+    <div class="lg-12 container-site">
+        <div class="d-flex justify-content-between">
+            <h1>Dashboard</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="lg-12 dash-link">
+            <div class="d-flex">
+
+                <div class="lg-9 card-width">
+                    <div class="row justify-content-between">
+
+                        <div class="lg-4 card-content" *ngFor="let card of cards">
+
+                            <a [routerLink]="card.redirectUrl">
+                                <div class="card-spacing">
+                                    <img [src]="card.imageUrl" alt="" class="card-img">
+
+                                </div>
+                                <div class="card-title">
+                                    <h3>{{ card.title }}</h3>
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg-3">
+                    <div class="content-box">
+                        <h2>Shortcuts</h2>
+                        <div class="head-box">
+                            <h3 class="sub-heads first-head">Create Task</h3>
+                            <h3 class="sub-heads">Create Case</h3>
+                            <h3 class="sub-heads">Check Status of My Order</h3>
+                            <h3 class="sub-heads">Where are My Documents?</h3>
+                            <h3 class="sub-heads last-head">Do I Need to File Anything with The State?</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</section>

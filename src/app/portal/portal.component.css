@@ -1,0 +1,269 @@
+/* Common styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'bold';
+    font-size: 2.6vw;
+    color: var(--black);
+}
+
+h2 {
+    font-family: 'bold';
+    font-size: 1.562vw;
+    color: var(--black);
+
+}
+
+h3 {
+    font-family: 'bold';
+    font-size: 1.3vw;
+    color: var(--white);
+}
+
+p {
+    font-family: 'reg';
+    font-size: 1.56vw;
+    color: var(--white);
+}
+
+.container-site {
+    padding-left: 3.7vw;
+    padding-right: 3.7vw;
+    padding-top: 1.3vw;
+    background: var(--dashboard-bg);
+}
+
+.search-input::placeholder {
+    background-image: url('../../assets/img/search-icon.png');
+    background-size: 1.15vw;
+    background-position: 0.6vw center;
+    background-repeat: no-repeat;
+    padding-left: 2.3vw;
+}
+
+.search-input {
+    font-family: 'reg';
+    padding-top: 0.9vw;
+    padding-bottom: 0.9vw;
+    width: 98%;
+    margin-left: 3%;
+    font-size: 0.85vw;
+    border-radius: 4px;
+    background-color: var(--search-input);
+    border: 0;
+    color: var(--search-input-color);
+}
+
+.report-box {
+    padding: 2.5vw 2.56vw 3vw 2.56vw;
+    background-color: var(--nav);
+    margin-top: 1.5vw;
+    border-radius: 1vw;
+    width: 49.45%;
+    height: 38vw;
+}
+
+.report-portion {
+    border-bottom: 1px solid var(--report-border);
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
+
+.report-head-1 {
+    margin-bottom: 1.16vw;
+}
+
+.anual-reports {
+    background-color: var(--yellow);
+    width: 21vw;
+    border-radius: 0.3vw;
+    text-align: center;
+    padding: 1.95vw 0 1.5vw;
+}
+
+.report-head-2 {
+    padding-bottom: 0.5vw;
+}
+
+.file-link {
+    align-content: center;
+    margin-left: 2.8vw;
+}
+
+.file-link p {
+    text-decoration: 0.1vw underline;
+    color: var(--black);
+}
+
+.report-portion:last-child {
+    border-bottom: none;
+}
+
+.right-site {
+    width: 49.45%;
+}
+
+.mail-box {
+    background-color: var(--nav);
+    margin-top: 1.5vw;
+    border-radius: 1vw;
+    width: 100%;
+    padding-bottom: 2.2vw;
+}
+
+.mail-head {
+    padding: 2.3vw 2.6vw 0.8vw;
+}
+
+/* mail table */
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.acc-box {
+    margin-bottom: 1.6vw;
+}
+
+th {
+    font-size: 1.05vw;
+    text-align: start;
+    background-color: var(--nav);
+    padding-bottom: 1.4vw;
+    color: var(--black);
+    font-family: 'bold';
+}
+
+.header-1 {
+    padding-left: 3.6vw;
+    width: 32.6%;
+}
+
+.header-2 {
+    width: 30.5%;
+}
+
+.header-3 {
+    width: 43%;
+}
+
+.table-striped tr:nth-child(odd) {
+    background-color: var(--table-stripe);
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: var(--nav);
+}
+
+td {
+    color: var(--black);
+    padding-top: 0.92vw;
+    padding-bottom: 0.92vw;
+}
+
+.text-1 {
+    font-family: 'med';
+    font-size: 0.95vw;
+}
+
+.text-2 {
+    font-family: 'reg';
+    font-size: 0.95vw;
+}
+
+.table-btn {
+    font-size: 0.72vw;
+    font-family: 'med';
+    border: 1px solid var(--table-btn);
+    padding: 0.75vw 2.35vw 0.75vw 2.35vw;
+    border-radius: 0.25vw;
+    cursor: pointer;
+    margin-left: 2.6vw;
+}
+
+.table-btn:hover {
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+}
+
+/* mail table */
+
+/* accordion */
+
+.acc-box {
+    margin-top: 1vw;
+    background-color: var(--nav);
+    padding-top: 2.3vw;
+    padding-left: 2.6vw;
+    border-radius: 1vw;
+    padding-bottom: 3.05vw;
+    padding-right: 4.2vw;
+}
+
+.acc-head {
+    margin-bottom: 1.2vw;
+}
+
+.fa-minus:before,
+.fa-subtract:before,
+.fa-add:before,
+.fa-plus:before {
+    font-size: 0.7vw;
+}
+
+.example-accordion {
+    display: block;
+}
+
+.example-accordion-item {
+    display: block;
+}
+
+.example-accordion-item+.example-accordion-item {
+    border-top: none;
+}
+
+.example-accordion-item-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    color: var(--black);
+    font-size: 1.05vw;
+    font-family: 'med';
+    padding: 0.75vw 1.7vw 0.75vw 1.7vw;
+    background-color: var(--table-stripe);
+    margin-top: 0.5vw;
+    border-radius: 0.3vw;
+}
+
+.example-accordion-item-body {
+    margin-top: 0.5vw;
+}
+
+.order {
+    display: block;
+
+    font-size: 1vw;
+    font-family: 'reg';
+    color: var(--black);
+    padding: 0.5vw 3.5vw 0.5vw 2vw;
+}
+
+.order:not(.last) {
+    border-bottom: 1px solid var(--acc-border);
+}
+
+.order.last {
+    border-bottom: none;
+}
+
+.example-accordion-item-header:hover {
+    cursor: pointer;
+}
+
+/* accordion */

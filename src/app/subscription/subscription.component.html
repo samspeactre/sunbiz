@@ -1,0 +1,47 @@
+<section>
+
+    <app-navbar></app-navbar>
+
+
+    <div class="lg-12 container-site">
+
+        <div class="d-flex justify-content-between">
+            <h1>Subscription Name</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="subs-table">
+            <table class="custom-table table-striped">
+                <thead>
+                    <tr>
+                        <th class="header-1">Order</th>
+                        <th class="header-2">Date Ordered</th>
+                        <th class="header-3">Date Completed</th>
+                        <th class="header-4">Status</th>
+                        <th class="header-5"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of tableData">
+                        <td ><a href="" class="text-1">{{ item.order }}</a></td>
+                        <td class="text-2">{{ item.do }}</td>
+                        <td class="text-3">{{ item.dc }}</td>
+                        <td ><a href="" class="text-4">{{ item.status }}</a></td>
+                        <td class="text-5">
+                            <span class="table-btn">
+                                {{ item.revise }}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</section>

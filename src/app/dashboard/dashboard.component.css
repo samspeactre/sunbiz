@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'bold';
+    font-size: 2.6vw;
+    color: var( --black);
+}
+
+h2{
+    font-family: 'bold';
+    font-size: 1.58vw;
+    color: var( --black);
+}
+
+h3{
+    font-family: 'med';
+    font-size: 1.32vw;
+    color: var(--black);
+}
+
+.container-site {
+    padding-left: 3.7vw;
+    padding-right: 3.7vw;
+    padding-top: 1.3vw;
+    padding-bottom: 1.3vw;
+    background: var(--dashboard-bg);
+}
+
+.search-input::placeholder {
+    background-image: url('../../assets/img/search-icon.png');
+    background-size: 1.15vw;
+    background-position: 0.6vw center; 
+    background-repeat: no-repeat;
+    padding-left: 2.3vw;
+}
+
+.search-input{
+    font-family: 'reg';
+    padding-top: 0.9vw;
+    padding-bottom: 0.9vw;
+    width: 94%;
+    margin-left: 7%;
+    font-size: 0.85vw;
+    border-radius: 3px;
+    background-color: var(--search-input);
+    border: 0;
+    color: var(--search-input-color);
+}
+
+.dash-link{
+    margin-top: 1.6vw;
+}
+
+.card-width{
+    width: 70.55vw;
+}
+
+.card-content{
+    background-color: var(--nav);
+    border-radius: 1vw;
+    width: 22.3vw;
+    margin-bottom: 1.3vw;
+}
+
+.card-spacing{
+    padding-left: 8.4vw;
+    padding-top: 5.4vw;
+}
+
+.card-title{
+    padding-bottom: 3.5vw;
+    text-align: center;
+}
+
+.card-img{
+  width: 5.75vw;
+  object-fit: cover;
+  margin-bottom: 2.5vw;
+}
+
+.content-box{
+    margin-left: 1.05vw;
+    background-color: var(--nav);
+    border-radius: 1vw;
+    padding-top: 1.55vw;
+    padding-left: 1.8vw;
+    padding-right: 1.8vw;
+    
+}
+
+.head-box{
+    margin-top: 1.95vw;
+}
+
+.sub-heads{
+    margin-left: 0;
+    font-size: 1.37vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2.35vw;
+    border-bottom: 1px dashed var(--yellow);
+}
+
+.first-head{
+    padding-top: 0;
+}
+
+.last-head{
+    border-bottom: 0;
+    padding-bottom: 3.2vw;
+}

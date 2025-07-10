@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'med';
+    font-size: 0.9vw;
+    color: var(--black-color);
+    align-content: center;
+}
+
+.navbar {
+    background-color:var(--nav);
+}
+
+.container-site {
+    padding-left: 3.7vw;
+    padding-right: 3.7vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.logo {
+    width: 5.2vw;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.center hr {
+    border: none;
+    border: 1px solid var(--nav-line);
+}
+
+.Horizontal-Line {
+    align-content: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    margin-left: 5.5vw;
+}
+
+.help {
+    display: flex;
+    height: 2vw;
+    padding-right: 1.78vw;
+    border-right: 1px solid var(--nav-border);
+}
+
+.help-icon {
+    width: 1.8vw;
+    object-fit: cover;
+    padding-right: 0.5vw;
+}
+
+.toggle-btn {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    margin-top: 1.5vw;
+}
+
+.notification {
+    position: relative;
+    border-left: 1px solid var(--nav-border);
+    border-right: 1px solid var(--nav-border);
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    height: 2vw;
+}
+
+.notification-img {
+    width: 1.5vw;
+    object-fit: cover;
+}
+
+.notification .dropdown {
+    position: absolute;
+    width: 13vw;
+    top: 2.2vw;
+    left: -9.7vw;
+    color: var(--black-color);
+    background-color: var(--light-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.notification-drop li{
+    list-style: none;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0.5vw;
+    border-bottom: 1px solid rgb(157, 154, 154);
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    padding-left: 1vw;
+}
+
+.profile img {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    margin-left: 0.7vw;
+    border: 2px solid var(--yellow);
+}
+
+.profile-icon {
+    margin-top: 0.8vw;
+    margin-left: 0.3vw;
+    color: var(--black-color);
+}
+
+.profile .dropdown{
+    position: absolute;
+    width: 7vw;
+    top: 3.2vw;
+    left: 2vw;
+    color: var(--black-color);
+    background-color: var(--light-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.profile-drop li{
+    list-style: none;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0.5vw;
+    border-bottom: 1px solid rgb(157, 154, 154);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+/* Add more styling as needed */

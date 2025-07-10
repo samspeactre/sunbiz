@@ -1,0 +1,9 @@
+p{
+    font-size: 0.8vw;
+    font-family: 'reg';
+    color: var(--black);
+    background-color: var(--nav);
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}

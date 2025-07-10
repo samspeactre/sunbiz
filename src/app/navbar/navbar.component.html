@@ -1,0 +1,64 @@
+<nav class="navbar">
+    <div class="lg-12">
+        <div class="row container-site">
+
+            <div class="lg-1">
+               <a href="" routerLink="/">
+                    <img src="../../assets/img/nav-logo.png" alt="Logo" class="logo">
+
+               </a>
+            </div>
+
+            <div class="lg-7 Horizontal-Line">
+                <div class="center">
+                    <!-- Horizontal Line -->
+                    <hr>
+                </div>
+            </div>
+
+            <div class="lg-4 align-content-center">
+                <div class="right">
+
+                    <div >
+                        <a href="" class="help">
+                            <img src="../../assets/img/nav-help.png" alt="" class="help-icon">
+                            <h1>Help</h1>
+                        </a>
+                    </div>
+
+                    <div class="toggle-btn">
+                        <app-toggle></app-toggle>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="notification" (click)="toggleNotificationDropdown()">
+                        <img src="../../assets/img/nav-notification.png" alt="Notification Icon" class="notification-img">
+                        <!-- <span class="badge text-bg-danger">1</span> -->
+                        <div class="dropdown " [class.active]="notificationDropdownActive">
+                            <ul class="notification-drop">
+                                <li>Notification 1</li>
+                                <li>Notification 2</li>
+                                <li>Notification 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- User Profile -->
+                    <div class="profile" (click)="toggleProfileDropdown()">
+                        <h1>John Doe</h1>
+                        <img src="../../assets/img/nav-profile.jpg" alt="Profile Image">
+                        <i class="fa-solid fa-caret-down profile-icon"></i>
+                        <div class="dropdown" [class.active]="profileDropdownActive">
+                            <ul class="profile-drop">
+                                <li>My Profile</li>
+                                <li>Settings</li>
+                                <li>Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</nav>

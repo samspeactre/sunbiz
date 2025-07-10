@@ -1,0 +1,62 @@
+<section>
+
+    <app-navbar></app-navbar>
+
+
+    <div class="lg-12 container-site">
+
+        <div class="d-flex justify-content-between head-portion">
+            <h1>New Order Question/Request</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="request-box">
+            <h2>Please enter your question or request here</h2>
+
+            <div class="comment-box">
+                <form action="" id="usrform" (submit)="onSubmit($event)">
+                    <div>
+                        <textarea type="text" name="comment" class="comment"></textarea>
+                    </div>
+
+                    <div class="comments-btn">
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+                                <input type="file" id="fileInput" (change)="onFileSelected($event)"
+                                    *ngIf="!selectedFile" style="display: none;" />
+                                <button type="button" (click)="selectFile()" *ngIf="!selectedFile"
+                                    class="btn-text attach-btn">Upload Document</button>
+                                <span *ngIf="selectedFile" class="attach-file">{{ selectedFile.name }}</span>
+                                <button type="button" *ngIf="selectedFile" (click)="cancelFile()" class="attach-cancel">
+                                <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+
+
+                            <div>
+                                <button class="btn-text submit-btn" type="submit">Send</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="para">
+                    <p>You will receive a response from {{ '{' }}Assigned CSR name{{ '}' }} within 24 hours.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</section>

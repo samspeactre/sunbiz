@@ -1,0 +1,50 @@
+<section>
+
+    <app-navbar></app-navbar>
+
+
+    <div class="lg-12 container-site">
+
+        <div class="d-flex justify-content-between">
+            <h1>Accounting</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="subs-table">
+            <table class="custom-table table-striped">
+                <thead>
+                    <tr>
+                        <th class="header-1">Date</th>
+                        <th class="header-2">Description</th>
+                        <th class="header-3">Subscription</th>
+                        <th class="header-4">Amount</th>
+                        <th class="header-5">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of tableData">
+                        <td class="text-1">{{ item.date }}</td>
+                        <td class="text-2">{{ item.desc }}</td>
+                        <td class="text-3">{{ item.subs }}</td>
+                        <td class="text-4">{{ item.amount }}</td>
+                        <td class="text-5">{{ item.balance }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="lg-12 table-btn">
+                <span class="print-button" (click)="generatePDF()">Print Receipt</span>
+            </div>
+    
+            
+        </div>
+
+        
+    </div>
+
+    <app-footer></app-footer>
+
+</section>

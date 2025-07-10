@@ -1,0 +1,90 @@
+<section>
+
+    <app-navbar></app-navbar>
+
+
+    <div class="lg-12 container-site">
+        <div class="d-flex justify-content-between">
+            <h1>Charges & Payments</h1>
+
+            <div class="lg-3 search-bar">
+                <input type="search" class="form-control search-input" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="btns">
+
+            <a href="" class="btn-text">
+                <span>Subscription 1</span>
+            </a>
+
+            <a href="" class="btn-text-2">
+                <span>Subscription 2</span>
+            </a>
+
+        </div>
+
+        <div class=" lg-12 subs-box">
+            <div class="d-flex justify-content-between">
+                <h2>Subscription Name</h2>
+                <div class="add-btns">
+                    <a href="" class="add-btn-text">
+                        <span>State Fees</span>
+                    </a>
+
+                    <a href="" class="add-btn-text-2">
+                        <span>Sunbiz Fees</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="subs-table" #subsTable>
+
+            <table class="custom-table table-striped">
+                <thead>
+                    <tr>
+                        <th class="header-1">Date</th>
+                        <th class="header-2">Order#</th>
+                        <th class="header-3">Description</th>
+                        <th class="header-4">State Fees</th>
+                        <th class="header-5">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of tableData">
+                        <td class="text-1">{{ item.date }}</td>
+                        <td class="text-2">{{ item.order }}</td>
+                        <td class="text-3">{{ item.description }}</td>
+                        <td class="text-4">{{ item.stateFee }}</td>
+                        <td class="text-5">{{ item.balance }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="subs-footer d-flex justify-content-between">
+
+            <div>
+                <a class="subs-footer-btn">
+                    Make Payment <i class="fa-solid fa-arrow-right" style="margin-left: 0.4vw;"></i>
+                </a>
+            </div>
+
+            <div>
+                <a class="subs-footer-btn-2" (click)="generatePDF()">
+                    Print Recipt
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <app-footer></app-footer>
+
+</section>
